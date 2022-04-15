@@ -27,6 +27,11 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
         library: { type: "module" },
+        
+        // name: 'host',
+        remotes: {
+            "remote": "http://localhost:4201/remoteEntry.js",
+        },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 

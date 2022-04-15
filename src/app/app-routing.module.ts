@@ -12,6 +12,8 @@ const routes: Routes = [
         exposedModule: './Module',
         remoteName: 'remote',
       }).then((m) => m.ContainerModule),
+    // loadChildren: () => import('remote/Module').then((m) => m.ContainerModule),
+    //static module load does not work yet
   },
 ];
 
