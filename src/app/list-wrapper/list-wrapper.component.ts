@@ -23,8 +23,7 @@ export class ListWrapperComponent implements OnInit {
   async ngOnInit() {
     const { ListComponent } = await loadRemoteModule({
       remoteEntry: 'http://localhost:4201/remoteEntry.js',
-      type: 'script',
-      remoteName: 'remote',
+      type: 'module',
       exposedModule: './ListComponent',
     });
 
