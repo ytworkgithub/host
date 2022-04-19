@@ -32,5 +32,9 @@ export class ListWrapperComponent implements OnInit {
     );
 
     this.componentRef.instance.logger.log('ListComponent wrapper host');
+    this.componentRef.instance.input = 'text from host';
+    this.componentRef.instance.buttonClick.subscribe((value: string) =>
+      console.log(value)
+    );
   }
 }
